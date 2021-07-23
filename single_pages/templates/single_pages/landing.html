@@ -1,17 +1,61 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <title>이재현홈페이지</title>
-    </head>
-    <body>
-        <nav>
-            <a href="/blog/">Blog</a>
-            <a href="/about_me/">About me</a>
-        </nav>
 
-        <h1>안녕하세요. 이재현입니다.</h1>
-        <h2>대문페이지</h2>
-        <h3>아직 만들지 않음</h3>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Lee's Porfolio</title>
+
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'single_pages/css/landing.css' %}" media="screen">
+    
+    <script src="https://kit.fontawesome.com/8650526e2d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    {% include 'blog/navbar.html' %}
+
+    <section>
+        <div class="container">
+            <div class="col justify-content-between">
+                <div class="row-lg-6 col-lg-6">
+                    <h1 class="mt-5">JaeHyun's Portfolio</h1>
+                    <p>서울대학교 경영학과, 컴퓨터공학과<br>Contact : 010-2591-1955<br>Instagram : @janjan2_25</p>
+                </div>
+                <div class="row-lg-5 col-lg-6 mt-5">
+                    <h2>Blog - Recent posts</h2>
+                    {% for post in recent_posts %}
+
+                        <div class="card mt-1">
+                            <div class="card-body">
+                                <h6><a href="{{ post.get_absolute_url }}" class="text-decoration-none text-dark">{{ post.title }}</a></h6>
+                                <span class="badge badge-pill badge-light float-right">
+                                    <img class="mr-1 rounded-circle" width="20px" src="{{ post.get_avatar_url }}" alt="{{ post.author }}"
+                                    {{ post.author.username }}
+                                    &nbsp;
+                                    &nbsp;
+                                    {{ post.created_at }}
+                                </span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="fixed-bottom">
+        {% include 'blog/footer.html' %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
