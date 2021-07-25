@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>이재현에 대한 모든 것</title>
+    <title>Self Introduction</title>
 
     <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
     <link rel="stylesheet" href="{% static 'single_pages/css/about_me.css' %}" media="screen">
@@ -22,25 +22,28 @@
                     <h1>안녕하세요. 이재현입니다.</h1>
                     <br/>
                     <p class="lead">
-                        음악과 컴퓨터와 수영을 좋아합니다.<br/>
-                        데이터분석으로 돈을 벌고, 퇴근 후에는 운동을 하거나 책을 쓰면서 지냅니다.
+                        웹/앱 개발자이자 CEO가 되고 싶은 25살의 컴린이 입니다.
+                        <br/>운동과 축구, 게임, 그리고 사람 만나는 것을 좋아합니다.
                     </p>
     
                     <ul>
-                        <li>WORK EXPERIENCE</li>
-                        <ul>
-                            <li>크고좋은회사 - 빅데이터분석 (2019.10 ~)</li>
-                            <li>모모공공기관 (2016.02 ~ 2019.09)</li>
-                        </ul>
                         <li>EDUCATION</li>
                         <ul>
-                            <li>공학박사, 장고공학(Django Engineering), 파이썬대학교 (2010.03~2015.09)</li>
-                            <li>공학석사, 장고공학(Django Engineering), 파이썬대학교 (2007.09~2009.08)</li>
-                            <li>공학학사, 장고공학(Django Engineering), 파이썬대학교 (2003.03~2007.08)</li>
+                            <li>중동중학교 (2010 ~ 2012)</li>
+                            <li>중동고등학교 (2013 ~ 2015)</li>
+                            <li>서울대학교 자유전공학부 입학 (2016.02 ~ )</li>
+                            <li>서울대학교 경영학과 진입 (2017.02 ~ )</li>
+                            <li>서울대학교 컴퓨터공학과 진입 (2021.02 ~ )</li>
                         </ul>
-                        <li>PUBLISH</li>
+                    </ul>
+                    <ul>
+                        <li>ACTIVITIES</li>
                         <ul>
-                            <li>DO IT DJANGO, 이지스퍼블리싱 (2020)</li>
+                            <li>자유전공학부 춤동아리 '사자후' 개설 및 운영 (2016.02 ~ 2018.02)</li>
+                            <li>인문대 춤동아리 '혼또니' (2016.09 ~ 2018.02)</li>
+                            <li>축구 동아리 'Soccer21' (2016.02 ~ 2017.02)</li>
+                            <li>6사단 신병교육대대 조교 (2018.05 ~ 2020.01)</li>
+                            <li>연합 마케팅 전략 학회 'MCL' (2020.03 ~ 2020.08)</li>
                         </ul>
                     </ul>
     
@@ -62,37 +65,43 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="card" data-toggle="modal" data-target="#pycon2017">
-                        <img class="card-img-top" src="{% static 'single_pages/images/pycon_sy_2017.png' %}">
+                        <img class="card-img-top" src="{% static 'single_pages/images/pentface_1.png' %}">
                         <div class="card-body">
-                            <h5 class="card-title">파이썬으로 통계업무 자동화하기 [PYCON 2017]</h5>
-                            <p>Python, Django, Pandas, python-docx로 통계업무 자동화한 내용을 파이콘에서 발표했습니다.</p>
+                            <h6 class="card-title"><b>드라마 '펜트하우스' 속 내 닮은꼴 찾기</b></h6>
+                            <p>얼굴 사진을 업로드 하면<br/> Teachable Machine을 통해 인공지능이 <br/>드라마 '펜트하우스' 속의 어떤 등장인물과 닮았는지 알려주는 웹사이트</p>
+                            <div style="float:right">
+                                <a href="https://pentface.ml/" target="_blank"><span class="badge badge-pill badge-dark">구경가기</span></a>
+                            </div>
                         </div>
                     </div>
                 </div>
     
                 <div class="col-lg-4">
                     <div class="card" data-toggle="modal" data-target="#inflearn_django2">
-                        <img class="card-img-top" src="{% static 'single_pages/images/inflearn_django2.png' %}">
+                        <img class="card-img-top" src="{% static 'single_pages/images/mint_2.png' %}">
                         <div class="card-body">
-                            <h5 class="card-title">파이썬 사용자를 위한 웹개발 입문 A to Z Django + Bootstrap</h5>
-                            <p>파이썬 웹개발에 대한 인프런 동영상 강의입니다.</p>
+                            <h6 class="card-title"><b>자신의 여행 유형 알아보기</b></h6>
+                            <p>개인의 여행 선호도를 테스트롤 통해 <br/>분석하여 자신의 여행 유형이 무엇인지<br/> 알려주는 웹사이트</p>
+                            <div style="float:right">
+                                <a href="https://minttour.netlify.app/" target="_blank"><span class="badge badge-pill badge-dark">구경가기</span></a>
+                            </div>
                         </div>
                     </div>
                 </div>
     
                 <div class="col-lg-4">
                     <div class="card" data-toggle="modal" data-target="#automation_python">
-                        <img class="card-img-top" src="{% static 'single_pages/images/automation_python.png' %}">
+                        <img class="card-img-top" src="{% static 'single_pages/images/auto_2.png' %}" height="370">
                         <div class="card-body">
-                            <h5 class="card-title">직장인을 위한 프로그래밍 입문과 업무자동화 활용</h5>
-                            <p>파이썬 업무자동화에 대한 인프런 동영상 강의입니다.</p>
+                            <h6 class="card-title"><b>자동 예약 프로그램</b></h6>
+                            <p>파이썬 셀레니움과 PyQt5를 이용하여 <br/>원하는 날짜와 시간을 선택하면 <br/>자동으로 예약해주는 프로그램</p>
                         </div>
                     </div>
                 </div>
             </div>
-    
         </div>
     </section>
+    
     <div class="fixed-bottom">
         {% include 'blog/footer.html' %}
     </div>
