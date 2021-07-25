@@ -24,21 +24,28 @@
                 </div>
                 <div class="row-lg-5 col-lg-6 mt-5">
                     <h2>Blog - Recent posts</h2>
-                    {% for post in recent_posts %}
-
-                        <div class="card mt-1">
+                    {% if recent_posts %}
+                        {% for post in recent_posts %}
+                            <div class="card mt-1">
+                                <div class="card-body">
+                                    <h6><a href="{{ post.get_absolute_url }}" class="text-decoration-none text-dark">{{ post.title }}</a></h6>
+                                    <span class="badge badge-pill badge-light float-right">
+                                        <img class="mr-1 rounded-circle" width="20px" src="{{ post.get_avatar_url }}" alt="{{ post.author }}"
+                                        {{ post.author.username }}
+                                        &nbsp;
+                                        &nbsp;
+                                        {{ post.created_at }}
+                                    </span>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="card mt-1 col-lg-7">
                             <div class="card-body">
-                                <h6><a href="{{ post.get_absolute_url }}" class="text-decoration-none text-dark">{{ post.title }}</a></h6>
-                                <span class="badge badge-pill badge-light float-right">
-                                    <img class="mr-1 rounded-circle" width="20px" src="{{ post.get_avatar_url }}" alt="{{ post.author }}"
-                                    {{ post.author.username }}
-                                    &nbsp;
-                                    &nbsp;
-                                    {{ post.created_at }}
-                                </span>
+                                <h6><a href="#" class="text-decoration-none text-dark">아직 게시물이 없습니다.</a></h6>
+                            </div>
                         </div>
-                    </div>
-                    {% endfor %}
+                    {% endif %}
                 </div>
             </div>
         </div>
