@@ -30,11 +30,11 @@
                                 <div class="card-body">
                                     <h6><a href="{{ post.get_absolute_url }}" class="text-decoration-none text-dark">{{ post.title }}</a></h6>
                                     <span class="badge badge-pill badge-light float-right">
-                                        <img class="mr-1 rounded-circle" width="20px" src="{{ post.get_avatar_url }}" alt="{{ post.author }}"
+                                        <img class="mr-1 rounded-circle" width="20px" src="{{ post.get_avatar_url }}" alt="{{ post.author }}">
                                         {{ post.author.username }}
                                         &nbsp;
                                         &nbsp;
-                                        {{ post.created_at }}
+                                        <small><span class="text-muted"><b>{{ post.created_at }}</b></span></small>
                                     </span>
                                 </div>
                             </div>
@@ -50,9 +50,8 @@
             </div>
         </div>
     </section>
-    <div class="fixed-bottom">
-        {% include 'blog/footer.html' %}
-    </div>
+    
+    {% include 'blog/footer.html' %}
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
